@@ -1,0 +1,40 @@
+
+              
+        <table class="table">
+         <tr>
+              <th> Matricule</th>
+              <th> Nom </th>
+              <th> Prenom</th>
+              <th> Absence</th>
+         
+          </tr> 
+      
+          </table>
+      
+      
+          <table class="table">
+            <app-etudiant *ngFor=" let e of liste"
+                          [id]="e.id" 
+                          [nom]="e.nom"  
+                          [prenom] = "e.prenom"
+                          [abs] = "e.abs" 
+                           >
+      
+             </app-etudiant>
+            </table> 
+      
+          
+        
+
+
+<!--
+<button class="btn btn-primary"
+        (click)="onSave()">Enregistrer les groupes</button>
+
+        <button class="btn btn-primary"
+        (click)="onRecup()">Recuperer les groupes</button>
+
+
+
+</body>  -->
+

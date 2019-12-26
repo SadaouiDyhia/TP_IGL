@@ -1,0 +1,98 @@
+
+
+<!--
+      
+      <h2>Appareil :</h2> <button class="btn btn-success"
+                                  [disabled]="!isConnect"
+                                  (click)="onFonction()"
+      >Tout allumer</button>
+      <ul class="list-group">
+        <app-etat> </app-etat> 
+        <app-etat> </app-etat>
+        <app-etat> </app-etat>
+      </ul>
+
+      <div class="navbar-right">
+    <p>Vous êtes connecté depuis {{ secondes }} secondes !</p>
+</div>
+</-->  
+
+<!--  // PARTIE 1 //
+     <div  style=" margin-left: 30% ; margin-right : 30%;  ">
+      <h2  style=" margin-top: 100px; margin-bottom: 100px; border-bottom: solid; border-color: gray; ">Les groupes :</h2>
+      <ul class="list-group list-group-flush"   >
+        <app-groupe  *ngFor="let g of tabg "
+                       [name]="g.name"
+                       > </app-groupe>
+      </ul>
+      </div>
+</-->   
+
+
+
+
+
+
+<!DOCTYPE html>
+<html >
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Table : </h2>
+              
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Matricule</th>
+        <th>Nom </th>
+        <th>Prenom</th>
+        <th>Absence</th>
+      </tr>
+    </thead>
+    <tbody>
+      <app-etudiant *ngFor=" let e of liste"
+                    [id]="e.id" 
+                    [nom]="e.nom"  
+                    [prenom] = "e.prenom"
+                    [abs] = "e.abs" 
+                     >
+       </app-etudiant>
+    </tbody>
+  </table>
+</div>
+
+<button class="btn btn-primary"
+        (click)="onSave()">Enregistrer les groupes</button>
+
+        <button class="btn btn-primary"
+        (click)="onRecup()">Recuperer les groupes</button>
+
+
+
+</body>
+
+
+
+
+<footer>
+  <div class="alert alert-danger alert-dismissible fade show">
+    <button type="button" class="close" data-dismiss="alert"> &times; </button>
+    <strong>Attention!</strong> {{ nbmax_who}} a atteint nombre maximum d'absences
+  </div>
+</footer>
+
+</html>
+
+
+
+

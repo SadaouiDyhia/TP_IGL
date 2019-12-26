@@ -10,7 +10,7 @@ const pool=mysql.createPool(
     })
     let tp={}
     tp.all=()=>
-    {
+    { // test 
         var r
         return new Promise((resolve,reject)=>
         {

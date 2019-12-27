@@ -45,9 +45,9 @@ onRecup() {
 
    // this.liste.values()[1]= this.grpService.listee.values()[1];  
     
-  
+      this.grpService.recupListeGrpFromServer; // listServer1
       this.liste= this.grpService.liste1;
-   
+      
 
 
 

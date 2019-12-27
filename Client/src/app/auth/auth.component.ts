@@ -19,6 +19,7 @@ export class AuthComponent implements OnInit {
 
   ngOnInit() {
 
+    this.grpService.recupListeGrp2FromServer; //listServer2
     this.liste= this.grpService.liste2;
   }
 

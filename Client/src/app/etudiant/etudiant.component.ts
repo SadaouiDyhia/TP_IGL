@@ -17,7 +17,7 @@ export class EtudiantComponent implements OnInit {
   @Input() prenom : string ;
   @Input() abs  ; 
 
-  nvgrp : string;  
+  nvgrp : number;  
  
   constructor(private grpService : grpService) {}
 

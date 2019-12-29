@@ -22,7 +22,11 @@ export class EtudiantComponent implements OnInit {
   @Input() abs  ; 
   nvgrp;
 
+<<<<<<< HEAD
   
+=======
+  nvgrp : number;  
+>>>>>>> ed39d15ddd26ede350d7e14e8f887fd93e9b5db0
  
   constructor(private grpService : grpService) {}
 

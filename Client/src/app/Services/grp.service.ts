@@ -87,7 +87,31 @@ export class grpService {
         
     getGroupesFromServer() {
     this.httpClient
+<<<<<<< HEAD
       .get<any[]>('https://localhost:3000/')
+=======
+      .get<any[]>('https://localhost:3000/TEST.json')
+      .subscribe(
+        (response) => {
+          this.tabres = response;
+          console.log(response[0]);
+          //this.emitAppareilSubject();
+        },
+        (error) => {
+          console.log('Erreur ! : ' + error);
+        }
+      );
+    }
+    abs ( id  , num : number )
+    { 
+      var tab : any [] ;
+      tab[0]=id ; 
+      tab[1]=num ; 
+    
+
+      this.httpClient
+      .post('https://localhost:3000/TEST.json', tab )
+>>>>>>> ed39d15ddd26ede350d7e14e8f887fd93e9b5db0
       .subscribe(
         (response) => {
           this.tabres = response;
@@ -101,11 +125,30 @@ export class grpService {
     }
    
 
+<<<<<<< HEAD
     changerGroupe( g:Grp ){
     return this.httpClient.post<Grp>('http://localhost:3000/api/tp/changer',g,
     {headers:new HttpHeaders({
       'Content-type':'application/json'
     })} );
+=======
+    changerGroupe( id  , nvgr : number ){
+      var tab : any [] ;
+      tab[0]=id ; 
+      tab[1]=nvgr ; 
+    
+
+      this.httpClient
+      .post('https://localhost:3000/TEST.json', tab )
+      .subscribe(
+        () => {
+          console.log('Enregistrement terminé !');
+        },
+        (error) => {
+          console.log('Erreur ! : ' + error);
+        }
+      );
+>>>>>>> ed39d15ddd26ede350d7e14e8f887fd93e9b5db0
 
     }
 

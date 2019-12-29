@@ -43,9 +43,42 @@ onRecup() {
 
    ngOnInit() {
     
+<<<<<<< HEAD
       this.grpService.getEtudiants1().subscribe((data)=>{
         this.liste=data
       })
+=======
+
+   // this.liste.values()[1]= this.grpService.listee.values()[1];  
+    
+      this.grpService.recupListeGrpFromServer; // listServer1
+      this.liste= this.grpService.liste1;
+      
+
+
+
+
+     //this.liste= this.grpService.listee ; 
+   
+    /*
+    const counter = Observable.interval(1000);
+
+    counter.subscribe(
+      (value) => {
+        this.secondes = value;
+      },
+      (error) => {
+        console.log('Uh-oh, an error occurred! : ' + error);
+      },
+      () => {
+        console.log('Observable complete!');
+      }
+
+      
+    );*/
+
+
+>>>>>>> ed39d15ddd26ede350d7e14e8f887fd93e9b5db0
   }
 
 

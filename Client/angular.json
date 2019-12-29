@@ -47,19 +47,19 @@
               "src/assets"
             ],
             "styles": [
-    "C:/Angular/ProjetCR3/node_modules/bootstrap/dist/css/bootstrap.css",
+    "node_modules/bootstrap/dist/css/bootstrap.css",
     "src/styles.scss",
-     "C:/Angular/ProjetCR3/src/vendor/fontawesome-free/css/all.min.css" ,
-    "C:/Angular/ProjetCR3/src/vendor/magnific-popup/magnific-popup.css",
-    "C:/Angular/ProjetCR3/src/css/creative.min.css" 
+    "src/vendor/fontawesome-free/css/all.min.css",
+    "src/vendor/magnific-popup/jquery.magnific-popup.js",
+    "src/css/creative.min.css"
     
 ],
             "scripts": [
-              "C:/Angular/ProjetCR3/node_modules/jquery/dist/jquery.min.js",
-              "C:/Angular/ProjetCR3/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
-              "C:/Angular/ProjetCR3/src/vendor/jquery-easing/jquery.easing.min.js",
-              "C:/Angular/ProjetCR3/src/vendor/magnific-popup/jquery.magnific-popup.min.js",
-              "C:/Angular/ProjetCR3/src/js/creative.min.js"
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "src/vendor/jquery-easing/jquery.easing.min.js",
+              "src/vendor/magnific-popup/jquery.magnific-popup.min.js",
+              "src/js/creative.min.js"
           
             ]
           },

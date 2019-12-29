@@ -8,6 +8,7 @@ import { Subject } from 'rxjs/Subject';
 
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Etudiant } from 'src/models/Etudiant.model';
 
 
 
@@ -23,10 +24,10 @@ export class AllViewComponent implements OnInit {
   secondes: number; 
 
 
-liste: any[] ; 
+liste: Etudiant[] ; 
 liste1:any[];
 liste2:any[];
-
+m:number
 
 constructor(private httpClient: HttpClient, private grpService : grpService) { };
 
@@ -42,36 +43,9 @@ onRecup() {
 
    ngOnInit() {
     
-
-   // this.liste.values()[1]= this.grpService.listee.values()[1];  
-    
-  
-      this.liste= this.grpService.liste1;
-   
-
-
-
-
-     //this.liste= this.grpService.listee ; 
-   
-    /*
-    const counter = Observable.interval(1000);
-
-    counter.subscribe(
-      (value) => {
-        this.secondes = value;
-      },
-      (error) => {
-        console.log('Uh-oh, an error occurred! : ' + error);
-      },
-      () => {
-        console.log('Observable complete!');
-      }
-
-      
-    );*/
-
-
+      this.grpService.getEtudiants1().subscribe((data)=>{
+        this.liste=data
+      })
   }
 
 
@@ -85,4 +59,3 @@ onRecup() {
   
 
 }
-

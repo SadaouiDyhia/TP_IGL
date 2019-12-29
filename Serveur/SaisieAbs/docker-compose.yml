@@ -7,7 +7,7 @@ services:
         - .:/SaisieAbs/
         - /SaisieAbs/node_modules
       ports:
-        - "3000:3000"
+        - "4200:"
       depends_on:
         - mysql
     mysql:

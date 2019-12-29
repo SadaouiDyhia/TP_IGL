@@ -19,7 +19,8 @@ export class AuthComponent implements OnInit {
 
   ngOnInit() {
 
-    this.liste= this.grpService.liste2;
+    this.grpService.getEtudiants2().subscribe((data)=>{
+      this.liste=data})
   }
 
 }

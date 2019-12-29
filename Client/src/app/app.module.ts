@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
@@ -13,8 +13,8 @@ import { AuthComponent } from './auth/auth.component';
 import { AllViewComponent } from './all-view/all-view.component';
 import { Routes } from '@angular/router';
 import {RouterModule} from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
-import { ObjetComponent } from './objet/objet.component';
+
+
 import { grpService } from './Services/grp.service';
 
 const appRoutes: Routes = [
@@ -32,7 +32,7 @@ const appRoutes: Routes = [
     EtudiantComponent,
     AuthComponent,
     AllViewComponent,
-    ObjetComponent,
+    
 
   ],
   imports: [

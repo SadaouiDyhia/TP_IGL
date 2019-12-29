@@ -10,7 +10,7 @@ export class AppComponent {
 
    tab : any[] ;
    liste: any[] ; 
-
+   m:number;
    constructor(private grpService : grpService)
    {
 
@@ -32,21 +32,16 @@ export class AppComponent {
 
    ngOnInit() {
 
-   this.tab = this.grpService.tabg ; 
+  // this.tab = this.grpService.tabg ; 
 
    if ( this.grpService.g1 ) {
 
-     this.liste= this.grpService.liste1;
-
+    this.grpService.getEtudiants1().subscribe((data)=>{
+      this.liste=data
+    }); // listServer1
+    
   }
     else{
-     this.liste= this.grpService.liste2;
-  }
-
-   //this.liste= this.grpService.listee ; 
-
-
-   }
-
-
-}
+      this.grpService.getEtudiants2().subscribe((data)=>{
+        this.liste=data})
+    }}}

@@ -31,31 +31,30 @@ const pool=mysql.createPool(
                   return reject(err)
               }
              
-              pool.query('SELECT Num FROM groupe WHERE NumGrp=? AND Niv="1cs" ',[Etud.grp],(err,resultas)=>
+              pool.query('SELECT Num FROM groupe WHERE NumGrp=? AND Niv="1cs" ',[Etud.grp],(err,resultas1)=>
              {
                 if(err)
               {
                   return reject(err)
               }
              
-              g1=resultas[0].Num+1
-            
-              pool.query('UPDATE groupe SET Num=?  WHERE NumGrp=? AND Niv= "1cs" ' ,[g1,g],(err,resultas)=>
+              g1=resultas1[0].Num+1
+              pool.query('UPDATE groupe SET Num=?  WHERE NumGrp=? AND Niv= "1cs" ' ,[g1,Etud.grp],(err,resultas2)=>
             {
                 if(err)
               {
                   return reject(err)
               }
-              return resolve(resultas[0])
               
             })
-            pool.query('SELECT Num FROM groupe WHERE NumGrp=? AND Niv="1cs" ',[g],(err,resultas)=>
+            pool.query('SELECT Num FROM groupe WHERE NumGrp=? AND Niv="1cs" ',[g],(err,resultas3)=>
              {
                 if(err)
               {
                   return reject(err)
               }
-              g1=resultas[0].Num-1
+              g1=resultas3[0].Num-1
+              console.log(g1)
               pool.query('UPDATE groupe SET Num=?  WHERE NumGrp=? AND Niv= "1cs" ' ,[g1,g],(err,resultas)=>
             {
                 if(err)

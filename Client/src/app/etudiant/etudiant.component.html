@@ -5,11 +5,12 @@
 
         
         <td style = "padding-left: 100px; " > {{ abs }}
-                      <button  style="width: 40px;" class="btn btn-warning"    (click)="onDown()">  -  </button> 
-                      <button  style="width: 40px;" class="btn btn-success"   (click)="onUp()"> + </button> 
+                      <button  style="width: 40px;" class="btn btn-warning"    (click)="onDown()" >  -  </button> 
+                      <button  style="width: 40px;" class="btn btn-success"   (click)="onUp()" > + </button> 
          </td>
 
-        <td style = "padding-left: 60px; "> <input style="width: 200px;" type="text" class="form-control" [(ngModel)]="nvgrp"> <button class="btn btn-primary" (click)="changerGrp()" >  Changer de goupe </button> 
+        <td style = "padding-left: 60px; "> <input style="width: 200px;" type="text" class="form-control" [(ngModel)]="nvgrp" class="here" 
+                 > <button class="btn btn-primary" (click)="changerGrp()" >  Changer de groupe </button> 
 
         </td>   
 

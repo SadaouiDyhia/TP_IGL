@@ -1,11 +1,8 @@
 import { Component,Input ,  OnInit } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/interval';
-import { Subject } from 'rxjs/Subject';
 import { grpService } from './../Services/grp.service';
 import {Abs} from '../../models/Abs.model'
 import {Grp} from '../../models/Grp.model'
-import { isUndefined } from 'util';
 
 
 @Component({
@@ -21,17 +18,18 @@ export class EtudiantComponent implements OnInit {
   @Input() prenom : string ;
   @Input() abs  ; 
   nvgrp;
-
-<<<<<<< HEAD
+  nb = 0 ; 
   
-=======
-  nvgrp : number;  
->>>>>>> ed39d15ddd26ede350d7e14e8f887fd93e9b5db0
  
   constructor(private grpService : grpService) {}
-
+  /**
+   * Fonction d'initialisation
+   */
   ngOnInit() {};
 
+  /**
+   * Fonction qui soustrait 1 du nombre d'absence 
+   */
   onDown(){
    if ( this.abs>0 ) {
     this.abs-=1 
@@ -42,6 +40,10 @@ export class EtudiantComponent implements OnInit {
    ) ;
   }
   };
+
+  /**
+   * Fonction qui augmente de 1 le nombre d'absences
+   */
 
   onUp(){
    if ( this.abs< 3 ) {
@@ -55,6 +57,10 @@ export class EtudiantComponent implements OnInit {
   }
   };
 
+  /**
+   * Fonction qui permet de changer le groupe de l'etudiant 
+   */
+
   changerGrp()
   {
     this.g.id=this.id
@@ -63,5 +69,11 @@ export class EtudiantComponent implements OnInit {
       (data : Grp)=>{}
     ) ; ; ; 
   }
+
+  IdGenerator() : number {
+    this.nb += 1 ; 
+    return this.nb; 
+  }
+
 
 }

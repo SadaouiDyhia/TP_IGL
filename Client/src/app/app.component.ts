@@ -1,3 +1,4 @@
+
 import { Component , OnInit} from '@angular/core';
 import { grpService } from './Services/grp.service';
 
@@ -6,42 +7,57 @@ import { grpService } from './Services/grp.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+/**
+ *  Cette class affiche l'interface de l'application
+ */
+
 export class AppComponent {
 
-   tab : any[] ;
+  /**
+   * Variable qui prends la valeur de la liste a afficher 
+   */
+ 
    liste: any[] ; 
-   m:number;
    constructor(private grpService : grpService)
    {
 
    } 
 
+  /**
+    * Cette fonction affiche la liste des etudiants du groupe1
+    */
+
    setg1()
-  {
+   {
     this.grpService.g1= true;
     this.grpService.g2= false;
 
-  }
+   }
 
-  setg2()
-  {
+  /**
+    * Cette fonction affiche la liste des etudiants du groupe2
+    */
+
+   setg2()
+   {
     this.grpService.g1= false;
     this.grpService.g2= true;
 
-  }
+   }
 
-   ngOnInit() {
-
-  // this.tab = this.grpService.tabg ; 
+ ngOnInit() {
 
    if ( this.grpService.g1 ) {
 
     this.grpService.getEtudiants1().subscribe((data)=>{
       this.liste=data
-    }); // listServer1
+    }); 
     
   }
     else{
       this.grpService.getEtudiants2().subscribe((data)=>{
         this.liste=data})
-    }}}
+    }}
+  
+  }

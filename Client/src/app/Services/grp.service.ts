@@ -11,224 +11,64 @@ import { HttpHeaders } from '@angular/common/http';
 @Injectable()
 
 export class grpService {
-
-    tabres : any[];
-    listServer1 : any[];
-    ListServer2 : any[]; 
     
-
+  /**
+   * variable qui permet de savoir qu'elle liste d'etudiant afficher 
+   * a partir de l'interaction de l'utilisateru avec le front : 
+   * Liste groupe 1 
+   */
     g1=true ; 
+
+    /**
+   * variable qui permet de savoir qu'elle liste d'etudiant afficher 
+   * a partir de l'interaction de l'utilisateru avec le front : 
+   * Liste groupe 1 
+   */
     g2=false ; 
   
    constructor(private httpClient: HttpClient) { }
+
+   /**
+    * Fonction qui permet de recuperer la liste des etudiants du groupe1 a partir du backend 
+    */
   getEtudiants1(): Observable<Etudiant[]> {
       return this.httpClient.get<Etudiant[]>('http://localhost:3000/api/tp/one');
   }
+
+  /**
+    * Fonction qui permet de recuperer la liste des etudiants du groupe2 a partir du backend 
+    */
   getEtudiants2(): Observable<Etudiant[]> {
     return this.httpClient.get<Etudiant[]>('http://localhost:3000/api/tp/two');
 }
+
+/**
+    * Fonction qui permet de signaler l'augmantation/diminution du nombre d'absence d'un etudiant
+    * au backend 
+    * @param A parametre qui indique la nouvelle valeur de l'absence
+    */
   abs (A:Abs ):Observable<Abs>
   { 
     return this.httpClient.post<Abs>('http://localhost:3000/api/tp/Absence',A,
     {headers:new HttpHeaders({
       'Content-type':'application/json'
-    })} );
+    })}
+     );
      
   } 
 
-   saveGroupesToServer() {
-    this.httpClient
-      .post('https://localhost:3000/TEST.json', this.listee)
-      .subscribe(
-        () => {
-          console.log('Enregistrement terminé !');
-        },
-        (error) => {
-          console.log('Erreur ! : ' + error);
-        }
-      );
-   }
+  /**
+    * Fonction qui permet de signaler le changement de groupe d'un etudiant
+    * au backend 
+    * @param g parametre qui indique la nouvelle valeur du groupe 
+    */
 
-   
-
-
-    recupListeGrpFromServer() {
-     
-      return this
-      .httpClient
-      .get<any[]>('https://localhost:3000/')
-      .subscribe(
-          (response) => {
-            this.listServer1 = response;
-            
-            //this.emitAppareilSubject();
-          },
-          (error) => {
-            console.log('Erreur ! : ' + error);
-          }
-        );
-      }
-
-      recupListeGrp2FromServer() {
-        console.log("vjfvuaf")
-        this.httpClient
-          .get<any[]>('https://localhost:3000/')
-          .subscribe(
-            (response) => {
-              this.ListServer2 = response;
-              
-              //this.emitAppareilSubject();
-            },
-            (error) => {
-              console.log('Erreur ! : ' + error);
-            }
-          );
-        }
-        
-    getGroupesFromServer() {
-    this.httpClient
-<<<<<<< HEAD
-      .get<any[]>('https://localhost:3000/')
-=======
-      .get<any[]>('https://localhost:3000/TEST.json')
-      .subscribe(
-        (response) => {
-          this.tabres = response;
-          console.log(response[0]);
-          //this.emitAppareilSubject();
-        },
-        (error) => {
-          console.log('Erreur ! : ' + error);
-        }
-      );
-    }
-    abs ( id  , num : number )
-    { 
-      var tab : any [] ;
-      tab[0]=id ; 
-      tab[1]=num ; 
-    
-
-      this.httpClient
-      .post('https://localhost:3000/TEST.json', tab )
->>>>>>> ed39d15ddd26ede350d7e14e8f887fd93e9b5db0
-      .subscribe(
-        (response) => {
-          this.tabres = response;
-          console.log(response[0]);
-          //this.emitAppareilSubject();
-        },
-        (error) => {
-          console.log('Erreur ! : ' + error);
-        }
-      );
-    }
-   
-
-<<<<<<< HEAD
-    changerGroupe( g:Grp ){
+   changerGroupe( g:Grp ){
     return this.httpClient.post<Grp>('http://localhost:3000/api/tp/changer',g,
     {headers:new HttpHeaders({
       'Content-type':'application/json'
     })} );
-=======
-    changerGroupe( id  , nvgr : number ){
-      var tab : any [] ;
-      tab[0]=id ; 
-      tab[1]=nvgr ; 
-    
-
-      this.httpClient
-      .post('https://localhost:3000/TEST.json', tab )
-      .subscribe(
-        () => {
-          console.log('Enregistrement terminé !');
-        },
-        (error) => {
-          console.log('Erreur ! : ' + error);
-        }
-      );
->>>>>>> ed39d15ddd26ede350d7e14e8f887fd93e9b5db0
 
     }
-
-
-  
-   tabg = [
-
-    {
-    name: 'groupe 1'
-    },
-
-    {
-    name: 'groupe 2'
-    },
-     
-  ];
-
-  
-  listee = [
-
-    {
-    id: '17/0047',
-    nom:'Malik ',
-    prenom:' Mehdi',
-    abs : 0  
-    },
-
-    {
-    id: '17/003',
-    nom:'Man ',
-    prenom:' Leibnigs',
-    abs : 0
-    },
-
-    {
-    id: '17/004',
-    nom:'Frau ',
-    prenom:' Manchmal',
-    abs : 0
-    } 
-     
-  ];
-
-  liste1 =[
-    {
-      id: '17/0047',
-      nom:'Malik ',
-      prenom:' Mehdi',
-      abs : 0  
-      },
-  
-      {
-      id: '17/003',
-      nom:'Man ',
-      prenom:' Leibnigs',
-      abs : 0
-      }
-
-
-  ]
-
-  liste2 =[
-
-    {
-      id: '17/004',
-      nom:'Frau ',
-      prenom:' Manchmal',
-      abs : 0
-      } 
-       
-   
-
-  ]
-
-
-
-
-  
-
-
-  
 
 }

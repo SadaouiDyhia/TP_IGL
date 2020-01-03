@@ -3,11 +3,7 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { EtatComponent } from './etat/etat.component';
 import { FormsModule } from '@angular/forms';
-import { etatService } from './Services/etat.service';
-import { GroupeComponent } from './groupe/groupe.component';
 import { EtudiantComponent } from './etudiant/etudiant.component';
 import { AuthComponent } from './auth/auth.component';
 import { AllViewComponent } from './all-view/all-view.component';
@@ -26,9 +22,6 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-   
-    EtatComponent,
-    GroupeComponent,
     EtudiantComponent,
     AuthComponent,
     AllViewComponent,
@@ -45,9 +38,9 @@ const appRoutes: Routes = [
 
   ],
   providers: [ 
-   etatService,
    grpService
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

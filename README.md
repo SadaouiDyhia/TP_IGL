@@ -111,7 +111,7 @@
    ng e2e 
    ```
 ### la documentation:
- -Backend :
+ - Backend :
  jsdoc 
  pour ce qui est de l'instalation on a installé globalement en exécutant la commande 
  ```

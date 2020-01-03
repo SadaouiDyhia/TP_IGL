@@ -50,10 +50,10 @@ const pool=mysql.createPool(
             * @returns {resolve}
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
             pool.query('SELECT COUNT(*) AS m FROM etudiant WHERE Niv = "1cs" AND (Grp=1) ',(err,resultas)=>
@@ -88,10 +88,10 @@ const pool=mysql.createPool(
             * @returns {resolve}
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
             pool.query('SELECT COUNT(*) AS m FROM etudiant WHERE Niv = "1cs" AND (Grp=2) ',(err,resultas)=>
@@ -121,10 +121,10 @@ const pool=mysql.createPool(
             
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
             pool.query('SELECT id FROM module WHERE Nom="IGL" ',(err,resultas)=>
@@ -146,10 +146,10 @@ const pool=mysql.createPool(
             
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
               pool.query('SELECT Absence FROM absence WHERE id_Etud=? AND id_Mod=? ',[M.id,id1],(err,resultas)=>
@@ -177,10 +177,10 @@ const pool=mysql.createPool(
             * @returns {resolve}
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
                 pool.query("UPDATE etudiant SET Abs=1  WHERE id=? " ,[M.id],(err,resultas)=>
@@ -201,10 +201,10 @@ const pool=mysql.createPool(
             * @returns {resolve}
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
                 pool.query("UPDATE etudiant SET Abs=0  WHERE id=? " ,[M.id],(err,resultas)=>
@@ -237,10 +237,10 @@ const pool=mysql.createPool(
             * @returns {resolve}
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
             pool.query('SELECT id,id_user FROM etudiant WHERE Niv = "1cs" AND (Grp=2) ',(err,resultas)=>
@@ -268,10 +268,10 @@ const pool=mysql.createPool(
             * @returns {resolve}
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
             pool.query('SELECT id,id_user FROM etudiant WHERE Niv = "1cs" AND (Grp=1) ',(err,resultas)=>
@@ -300,10 +300,10 @@ const pool=mysql.createPool(
             * @returns {resolve}
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
             pool.query('SELECT Nom,Prenom FROM user WHERE id=? ',[i],(err,resultas)=>
@@ -332,10 +332,10 @@ const pool=mysql.createPool(
             * @returns {resolve}
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
             pool.query('SELECT Absence FROM absence WHERE id_Etud=? AND id_Mod=1 ',[i],(err,resultas)=>

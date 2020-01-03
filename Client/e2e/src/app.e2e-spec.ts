@@ -13,16 +13,21 @@ describe('test automatisé : Fonction saisir absence ', () => {
     browser.waitForAngularEnabled(false);
     browser.ignoreSynchronization = true;
     browser.sleep(3000); 
-    
-    
-    expect( element(by.buttonText( "+")).click ).toBeDefined; 
+    element.all( by.buttonText( "+") ) .then( function ( items){
+      expect( element(by.buttonText( "+")).click ).toBeDefined ;
+    })
+
   });
 
   it('Devrait diminuer le nombre d"absence  ',async () => {
     browser.waitForAngularEnabled(false);
     browser.ignoreSynchronization = true;
     browser.sleep(3000); 
-    expect( element(by.buttonText( "-")).click ).toBeDefined ; 
+    element.all( by.buttonText( "-") ) .then( function ( items){
+      expect( element(by.buttonText( "-")).click ).toBeDefined ;
+    })
+
+     
   });
 
   afterEach(async () => {

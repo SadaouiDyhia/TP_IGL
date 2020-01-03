@@ -1,9 +1,9 @@
 # TP_IGL
-  Le projet est une application web de scolarité dedié aux étudiants,enseignants et agents d'administration(Enseignant,Agent d'administration dans notre cas) pour les permettre de :
+  Le projet est une application web de scolarité dedié aux étudiants,enseignants et agents d'administration(Enseignant,Agent d'administration dans notre cas) pour leur permettre de :
 
   => Changer le groupe d'un étudinant(Fonctionnalité 1)
 
-  => Saisir les Absence d'un groupe des étudinants (Fonctionnalité 2)
+  => Saisir les Absence d'un groupe d'étudinants (Fonctionnalité 2)
 
 
 ## Les Techenologie utilisée:
@@ -31,7 +31,7 @@
 
 ### Pour la documentation : 
 
-- JSDOC
+- JSDOC pour le Backend et typedoc , compdoc pour le frontend
 
 ### Pour le deployement :
 
@@ -39,11 +39,11 @@
 
 ## Les installations nécessaires :
 
-  Toutes les technologie cités  doivent étre installer en visitant ses sites officiels
+  Toutes les technologie cités  doivent étre installées en se rendants  sur les sites de documentations officiels 
 
   Créer un repertoire Projet oú vous placez ce projet
 
-  Initialiser les deux repertoires Serveur et Client on saisissant cette commande
+  Initialiser les deux repertoires Serveur et Client en saisissant cette commande
 
    ```
     npm init
@@ -112,13 +112,16 @@
    ```
 ### la documentation:
  - Backend :
- jsdoc 
- pour ce qui est de l'instalation on a installé globalement en exécutant la commande 
+ Pour ce qui est de l'instalation de jsdoc :
+  on a installé globalement en exécutant la commande 
  ```
  npm install -g jsdoc
  ````
- et pour générer la documentation en ligne 
- on éxécute la commande jsdoc chemin de notre fichier.js
+ et pour générer la documentation en ligne  
+ on éxécute la commande 
+ ````
+ jsdoc chemin de notre fichier.js
+ ```` 
 ## Contributeurs :
 
   Djecta Hibat_Errahmen

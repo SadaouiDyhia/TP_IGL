@@ -93,8 +93,8 @@
  ### Les tests unitaires :
  
    - Backend :
- 
-     Executer dans le repertoire test/Serveur/ChangerGrp ou  test/Serveur/SaisieAbs 
+     Modifier le script "test" dans le fichier package.js par "mocha"
+     Executer dans le repertoire Test/Server/ChangerGrp/test ou  Test/Server/SaisieAbs /test
 
      ```
       mocha 

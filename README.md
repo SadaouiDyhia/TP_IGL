@@ -52,12 +52,12 @@
 
 - Pour le repertoire Serveur:
   pour chaque sous repertoire :
-    Installer les dépendances dont vous allez besoin 
+    Installer les dépendances dont vous aurez besoin 
     ```
     npm install body-parser express express-list-endpoints mysql officegen --save
     ```
  - Pour le reperoire Client :
-   Installer les dépendances dont vous allez besoin 
+   Installer les dépendances dont vous aurez besoin 
     ```
     ng new Client
     ng add @angular/material
@@ -110,13 +110,21 @@
    ```
    ng e2e 
    ```
-
+### la documentation:
+ -Backend :
+ jsdoc 
+ pour ce qui est de l'instalation on a installé globalement en exécutant la commande 
+ ```
+ npm install -g jsdoc
+ ````
+ et pour générer la documentation en ligne 
+ on éxécute la commande jsdoc chemin de notre fichier.js
 ## Contributeurs :
 
   Djecta Hibat_Errahmen
   
   Sadaoui Dyhia
   
-  BouAbba Saloua
+  Bouabba Saloua
   
 

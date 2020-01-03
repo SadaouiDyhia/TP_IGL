@@ -3,7 +3,7 @@
 
   => Changer le groupe d'un étudinant(Fonctionnalité 1)
 
-  => Saisir les Absence d'un groupe d'étudinants (Fonctionnalité 2)
+  => Saisir les Absence d'un groupe d'étudiants (Fonctionnalité 2)
 
 
 ## Les Techenologie utilisée:

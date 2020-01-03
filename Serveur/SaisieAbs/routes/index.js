@@ -2,16 +2,36 @@ const express=require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 const db=require('../db')
+/**
+ * @namespace routes 
+ */
+/**
+ * @module router
+ */
 const router=express.Router()
 router.use(cors());
 router.use(bodyParser.json());
 router.use(bodyParser.urlencoded({extended: true}));
+/** 
+*@classdesc la classe etud qui contient les propriétes suivant 
+*@property {number } id
+*@property  {string} Nom 
+*@property  {string} Prenom 
+*@property {number} Abs 
+*/
 class etud{
     id
     Nom
     Prenom
     Abs
 }
+/** 
+* @function
+ * @name get/one
+ * @memberof routes
+ * @param {string} one 
+ 
+*/
 router.get('/one',async(req,res,next)=>
 {
     
@@ -41,6 +61,13 @@ router.get('/one',async(req,res,next)=>
         res.sendStatus(500);
     }
 })
+/** 
+* @function
+ * @name get/two
+ * @memberof routes
+ * @param {string} two
+ 
+*/
 router.get('/two',async(req,res,next)=>
 {
     
@@ -70,6 +97,13 @@ router.get('/two',async(req,res,next)=>
         res.sendStatus(500);
     }
 })
+/** 
+* @function
+ * @name post/Absence
+ * @memberof routes
+ * @param {string} Absence 
+ 
+*/
 router.post('/Absence',async(req,res,next)=>
 {
     try

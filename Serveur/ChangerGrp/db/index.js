@@ -75,10 +75,10 @@ const pool=mysql.createPool(
             * @param {sqlQuery} 
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err, resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
               
@@ -89,10 +89,10 @@ const pool=mysql.createPool(
             * @param {sqlQuery} 
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err, resultas1)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
             pool.query('UPDATE etudiant SET Grp=?  WHERE id=? ',[Etud.grp,Etud.id],(err,resultas)=>
@@ -108,10 +108,10 @@ const pool=mysql.createPool(
             * @param {sqlQuery} 
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err, resultas)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas
            * @returns {reject}
            */
                 pool.query('SELECT Num FROM groupe WHERE NumGrp=? AND Niv="1cs" ',[Etud.grp],(err,resultas1)=>
@@ -128,10 +128,10 @@ const pool=mysql.createPool(
             * @param {sqlQuery} 
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err, resultas1)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas1
            * @returns {reject}
            */
                pool.query('UPDATE groupe SET Num=?  WHERE NumGrp=? AND Niv= "1cs" ' ,[g1,Etud.grp],(err,resultas2)=>
@@ -148,10 +148,10 @@ const pool=mysql.createPool(
             * @param {sqlQuery} 
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas2)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas2
            * @returns {reject}
            */
            pool.query('SELECT Num FROM groupe WHERE NumGrp=? AND Niv="1cs" ',[g],(err,resultas3)=>
@@ -167,10 +167,10 @@ const pool=mysql.createPool(
             * @param {sqlQuery} 
            */
           /**
-           * la focntion (err,resulats)
+           * la focntion (err,resultas3)
            * @property {Function}
            * @param {any} err
-           * @param {any} resulats
+           * @param {any} resultas3
            * @returns {reject}
            */
               pool.query('UPDATE groupe SET Num=?  WHERE NumGrp=? AND Niv= "1cs" ' ,[g1,g],(err,resultas)=>
@@ -179,6 +179,18 @@ const pool=mysql.createPool(
               {
                 return reject(err)
               }
+                /** 
+            * la description de la  fonction qui se charge de la requete à la base de donéé 
+            * @property {Function} query
+            * @param {sqlQuery} 
+           */
+          /**
+           * la focntion (err,resultas)
+           * @property {Function}
+           * @param {any} err
+           * @param {any} resultas
+           * @returns {reject}
+           */
             })
             })
             })

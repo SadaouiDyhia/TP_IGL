@@ -23,15 +23,15 @@
 
 - Bootstrap 4
 
-- HTML5/SCSS
+- HTML5/SCSS/TypeScript
 
 - jasmine : pour les tests unitaires
 
-- Selinium pour les tests automatisés
+- Selenium pour les tests automatisés
 
 ### Pour la documentation : 
 
-- JSDOC pour le Backend et typedoc , compdoc pour le frontend
+- JSDOC pour le Backend et typedoc pour le frontend
 
 ### Pour le deployement :
 

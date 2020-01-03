@@ -217,7 +217,7 @@ const pool=mysql.createPool(
               return resolve(resultas[0])
             })
             }
-           return "Absence bien siasie"
+           return "Absence bien saisie"
             })
             })
         }) 
